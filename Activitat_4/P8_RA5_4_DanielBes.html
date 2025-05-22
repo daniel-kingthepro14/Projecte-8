@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Validació de correu</title>
+</head>
+<body>
+    <h2>Formulari de correu electrònic</h2>
+
+    <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)): ?>
+        <p style="color:red;">El correu no és vàlid.</p>
+    <?php endif; ?>
+
+    <form method="post">
+        <input type="text" name="email" placeholder="Correu" required>
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+</html>
+

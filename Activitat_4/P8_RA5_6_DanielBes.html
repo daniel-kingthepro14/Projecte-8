@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selecció amb menu desplegable</title>
+</head>
+<body>
+    <form method="POST">
+        <label>Ciutat d'origen:</label>
+        <select name="ciutat">
+            <option value="Barcelona">Barcelona</option>
+            <option value="Girona">Tokio</option>
+            <option value="Tarragona">Le Mans</option>
+            <option value="Lleida">Oslo</option>
+        </select>
+        <button type="submit">Enviar</button>
+    </form>
+    <?php
+    if (!empty($_POST["ciutat"])) {
+        echo "<p>Has seleccionat: " . htmlspecialchars($_POST["ciutat"]) . "</p>";
+    }
+    ?>
+</body>
+</html>
+

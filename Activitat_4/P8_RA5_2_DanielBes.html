@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulari GET</title>
+</head>
+<body>
+    <form method="GET">
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" required>
+        <br><br>
+        <label for="edat">Edat:</label>
+        <input type="number" id="edat" name="edat" required>
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <h2>Valors rebuts:</h2>
+    <p>Nom: <strong><?php echo isset($_GET['nom']) ? htmlspecialchars($_GET['nom']) : ''; ?></strong></p>
+    <p>Edat: <strong><?php echo isset($_GET['edat']) ? htmlspecialchars($_GET['edat']) : ''; ?></strong></p>
+</body>
+</html>
+
