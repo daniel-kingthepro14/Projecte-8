@@ -1,0 +1,20 @@
+<form action="editar_llibre.php" method="post" onsubmit="return validarForm()">
+    <label>ID del llibre:</label> <input type="number" name="id" id="id"><br>
+    <label>Nou títol:</label> <input type="text" name="titol" id="titol"><br>
+    <label>Nou autor:</label> <input type="text" name="autor" id="autor"><br>
+    <label>Nou any:</label> <input type="number" name="any" id="any"><br>
+    <button type="submit">Editar Llibre</button>
+</form>
+
+<script>
+    function validarForm() {
+        if (document.getElementById("id").value.trim() === "" ||
+            document.getElementById("titol").value.trim() === "" ||
+            document.getElementById("autor").value.trim() === "" ||
+            document.getElementById("any").value.trim() === "") {
+            alert("Tots els camps són obligatoris!");
+            return false;
+        }
+        return true;
+    }
+</script>

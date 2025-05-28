@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Cercar Llibres</title>
+</head>
+<body>
+    <h1>Cerca per autor</h1>
+    <form action="search_books.php" method="get">
+        <input type="text" name="autor" placeholder="Nom de l'autor" required>
+        <button type="submit">Cercar</button>
+    </form>
+    <table border="1">
+        <tr><th>ID</th><th>Títol</th><th>Autor</th><th>Any</th></tr>
+        <?php include 'search_books.php'; ?>
+    </table>
+</body>
+</html>

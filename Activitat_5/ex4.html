@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Afegir Llibre</title>
+    <script>
+        function validarFormulari() {
+            let titol = document.forms["llibreForm"]["titol"].value;
+            let autor = document.forms["llibreForm"]["autor"].value;
+            let any = document.forms["llibreForm"]["any"].value;
+
+            if (titol === "" || autor === "" || any === "") {
+                alert("Tots els camps són obligatoris!");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Afegir un nou llibre</h1>
+    <form name="llibreForm" action="insert_book.php" method="post" onsubmit="return validarFormulari()">
+        <input type="text" name="titol" placeholder="Títol" required>
+        <input type="text" name="autor" placeholder="Autor" required>
+        <input type="number" name="any" placeholder="Any" required>
+        <button type="submit">Afegir</button>
+    </form>
+</body>
+</html>

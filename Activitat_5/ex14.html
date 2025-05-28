@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestió d'Usuaris</title>
+</head>
+<body>
+    <h2>Llistat de Clients</h2>
+    <?php include 'llistar_clients.php'; ?>
+
+    <h2>Afegir un nou client</h2>
+    <form action="afegir_client.php" method="post">
+        <label>Nom:</label> <input type="text" name="nom"><br>
+        <label>Email:</label> <input type="email" name="email"><br>
+        <button type="submit">Afegir Client</button>
+    </form>
+</body>
+</html>

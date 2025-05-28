@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Panell CRUD</title>
+</head>
+<body>
+    <h1>Gestió de Llibres</h1>
+    
+    <h2>Llistat de llibres</h2>
+    <?php include 'llistar_llibres.php'; ?>
+
+    <h2>Afegir un llibre</h2>
+    <form action="afegir_llibre.php" method="post">
+        <label>Títol:</label> <input type="text" name="titol"><br>
+        <label>Autor:</label> <input type="text" name="autor"><br>
+        <label>Any:</label> <input type="number" name="any"><br>
+        <button type="submit">Afegir</button>
+    </form>
+
+    <h2>Editar un llibre</h2>
+    <form action="editar_llibre.php" method="post">
+        <label>ID:</label> <input type="number" name="id"><br>
+        <label>Nou títol:</label> <input type="text" name="titol"><br>
+        <label>Nou autor:</label> <input type="text" name="autor"><br>
+        <label>Nou any:</label> <input type="number" name="any"><br>
+        <button type="submit">Editar</button>
+    </form>
+
+    <h2>Eliminar un llibre</h2>
+    <form action="eliminar_llibre.php" method="post" onsubmit="return confirm('Segur que vols eliminar aquest llibre?');">
+        <label>ID:</label> <input type="number" name="id">
+        <button type="submit">Eliminar</button>
+    </form>
+</body>
+</html>
